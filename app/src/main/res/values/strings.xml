@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Contador</string>
+
+    <string name="lblContador">Contador</string>
+    <string name="txtContador">0</string>
+    <string name="btnDecrease">-</string>
+    <string name="btnIncrease">+</string>
+    <string name="btnReset">Reset</string>
 </resources>

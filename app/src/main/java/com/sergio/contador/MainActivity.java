@@ -9,14 +9,15 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     public Integer contador;
+    private TextView txtContador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        this.txtContador = (TextView) findViewById(R.id.txtContador);
         this.contador = 0;
-
     }
 
     public void contadorIncrease(View view) {
@@ -35,8 +36,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void contadorUpdateView() {
-//        TextView txtContador;
-        TextView txtContador = (TextView) findViewById(R.id.txtContador);
-        txtContador.setText(contador+"");
+        this.txtContador.setText(this.contador+"");
     }
 }

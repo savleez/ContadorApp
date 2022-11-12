@@ -10,63 +10,74 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/lblContador"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:text="@string/lblContador"
+            android:textAlignment="center"
+            android:textSize="24sp" />
 
-            <TextView
-                android:id="@+id/lblContador"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Contador"
-                android:textAlignment="center"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/txtContador"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:textAlignment="center"
-                android:textSize="72sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
+        <TextView
+            android:id="@+id/txtContador"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:textAlignment="center"
+            android:text="@string/txtContador"
+            android:textSize="100sp" />
 
-            <Button
-                android:id="@+id/btnDecrease"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="contadorDecrease"
-                android:text="-" />
+    </LinearLayout>
 
-            <Button
-                android:id="@+id/btnIncrease"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="contadorIncrease"
-                android:text="+" />
-        </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|center_vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/btnDecrease"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_weight="3"
+            android:gravity="bottom|center_horizontal"
+            android:onClick="contadorDecrease"
+            android:text="@string/btnDecrease"
+            android:textAlignment="gravity"
+            android:textSize="70dp" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btnIncrease"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"
+            android:layout_weight="6"
+            android:onClick="contadorIncrease"
+            android:text="@string/btnIncrease"
+            android:textSize="70dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/btnReset"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="contadorReset"
-                android:text="Reset" />
-        </LinearLayout>
+            android:onClick="contadorReset"
+            android:text="@string/btnReset"
+            android:textSize="18dp"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
